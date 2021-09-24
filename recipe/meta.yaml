@@ -1,5 +1,5 @@
 {% set name = "pyrayt" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyrayt-{{ version }}.tar.gz
-  sha256: 25a410f8a886cf0bec47a2da95bbf915170e83c23329c4d4f676e2ad2494a1d0
+  sha256: 9e7093e16466fd1d1d5cb9316313d932ddcfd3992e215ec915dbffd2df7b3350
 
 build:
   number: 0
