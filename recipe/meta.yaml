@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyrayt-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyrayt-{{ version }}.tar.gz
   sha256: 9e7093e16466fd1d1d5cb9316313d932ddcfd3992e215ec915dbffd2df7b3350
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,12 +19,12 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6,<3.9
+    - python {{ python_min }}
   run:
     - matplotlib-base >=3.3.4
     - numpy >=1.20.0
     - pandas >=1.2.2
-    - python >=3.6,<3.9
+    - python >={{ python_min }},<3.9
     - scipy >=1.6.0
 
 test:
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pyrayt/
