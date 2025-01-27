@@ -18,14 +18,14 @@ build:
 requirements:
   host:
     - pip
-    - poetry
+    - poetry-core >=1.0.0
     - python {{ python_min }}
   run:
-    - matplotlib-base >=3.3.4
-    - numpy >=1.20.0
-    - pandas >=1.2.2
-    - python >={{ python_min }},<3.9
-    - scipy >=1.6.0
+    - matplotlib-base >=3.3.4,<2.0.0
+    - numpy >=1.20.0,<2.0.0
+    - pandas >=1.2.2,<2.0.0
+    - python >={{ python_min }}
+    - scipy >=1.6.0,<2.0.0
 
 test:
   imports:
@@ -38,7 +38,7 @@ test:
     - python {{ python_min }}
 
 about:
-  home: https://pypi.org/project/pyrayt/
+  home: https://github.com/rfrazier716/PyRayT
   doc_url: https://pyrayt.readthedocs.io
   summary: A toolchain for developing and simulating optical packages
   license: MIT
